@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Config from '../../config.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Results from './components/Results';
+
+class App extends Component
+{
+	static constructUrl(result)
+	{
+		return '';
+	}
+
+	static fetchImage(url)
+	{
+		
+	}
+
+	static prepareResults(results)
+	{
+		return results.reduce(result =>
+		{
+			return (<li>{this.fetchImage(result)}</li>)
+		});
+	}
+
+	render()
+	{
+		console.log(Config.key);
+
+		return (
+		<div className="App">
+			<Header />
+			<Navigation />
+			<Results results={[]}/>
+		</div>
+		);
+	}
 }
 
 export default App;
