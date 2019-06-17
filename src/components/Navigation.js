@@ -1,57 +1,34 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
 
-import { Provider } from './context';
+import { NavLink } from 'react-router-dom';
 
 import Search from './Search';
 
 export default class Navigation extends Component
 {
-    constructor()
-  	{
-		super();
-
-		this.state =
+	//redirects route when user submits a search
+	redirect = (query) =>
+	{
+		if(query.length > 0)
 		{
-			results: []
-		};
-	} 
-	  
-	componentDidMount() 
-  	{
-    	this.handleSearch();
-  	}
-
-    handleSearch = (query = 'dogs') =>
-    {
-        Axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ec145451782b08cbf4c283a08be1fc4b&format=json&nojsoncallback=1&tags=${query}&per_page=24`)
-			.then(response =>
-			{
-				this.setState({ results: response.data });
-				console.log(response.data);
-			})
-			.catch(error =>
-			{
-				console.log('error fetching and parsing data', error);
-			});
-    }
+			this.props.history.push(`/${query}`);
+		}
+	}
 
     render()
     {
       	return (
-    		<Provider value={this.state.results}>
-				<nav class="main-nav">
+    		<nav className="main-nav">
 
-					<Search handleSearch={this.handleSearch}/>
+				<Search handleSearch={this.redirect}/>
 
-					<ul>
-						<li><a>Cats</a></li>
-						<li><a>Dogs</a></li>
-						<li><a>Computers</a></li>
-					</ul>
-				</nav>
-			</Provider>
-      );
+				<ul className="course-nav">
+        			<li><NavLink to={`/cats`}>Cats</NavLink></li>
+					<li><NavLink to={`/dogs`}>Dogs</NavLink></li>
+					<li><NavLink to={`/computers`}>Computers</NavLink></li>
+				</ul>
+			</nav>
+     	);
       
     }
 }

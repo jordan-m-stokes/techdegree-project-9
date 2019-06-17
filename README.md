@@ -1,4 +1,10 @@
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Config / API Key
+
+The config is should be called "Config.js" and be located in the root of the src folder.
+All it should contain is:  `module.exports.apiKey = "{your-api-key-here}"`
 
 ## Available Scripts
 

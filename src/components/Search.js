@@ -8,10 +8,12 @@ class Search extends Component
         text: ''
     }
 
+    //syncs "state" text with the text in the search bar
     onChange = event => {
       this.setState({ text: event.target.value });
     }
 
+    //handles when user submits text clearing the search bar
     handleSubmit = event => {
         event.preventDefault();
         this.props.handleSearch(this.query.value);
@@ -26,7 +28,7 @@ class Search extends Component
                     onChange={this.onChange}
                     ref={(input) => this.query = input}
                     placeholder="Search..." />
-                <button type="submit" class="search-button">
+                <button type="submit" className="search-button">
                     <SearchIcon />	
                 </button>
             </form>
