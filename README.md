@@ -3,7 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Config / API Key
 
-The config is should be called "Config.js" and be located in the root of the src folder.
+The config should be called "Config.js" and be located in the root of the src folder. <br>
 All it should contain is:  `module.exports.apiKey = "{your-api-key-here}"`
 
 ## Available Scripts
