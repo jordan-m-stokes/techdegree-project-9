@@ -10,8 +10,6 @@
 
 # production
 /build
-/mockup
-/.vscode
 
 # misc
 .DS_Store
