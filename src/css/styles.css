@@ -110,7 +110,7 @@ body {
   .photo-container ul li {
     display: inline-block;
     width: 260px;
-    height: 182px;
+    max-height: 182px;
     overflow: hidden;
     margin: 30px;
     border-radius: 8px;
