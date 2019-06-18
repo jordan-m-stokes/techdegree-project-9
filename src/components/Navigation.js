@@ -23,9 +23,9 @@ export default class Navigation extends Component
 				<Search handleSearch={this.redirect}/>
 
 				<ul className="course-nav">
-        			<li><NavLink to={`/cats`}>Cats</NavLink></li>
-					<li><NavLink to={`/dogs`}>Dogs</NavLink></li>
-					<li><NavLink to={`/computers`}>Computers</NavLink></li>
+        			<li><NavLink to={`/dogs`}>Dog</NavLink></li>
+					<li><NavLink to={`/sunset`}>Sunset</NavLink></li>
+					<li><NavLink to={`/snow`}>Snow</NavLink></li>
 				</ul>
 			</nav>
      	);
