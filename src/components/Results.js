@@ -21,7 +21,7 @@ export default class Results extends Component
 	{
 		return results.map( (result, index) =>
 		{
-            return (<Image data={result}/>);
+            return (<Image key={index} data={result}/>);
 		});
 	}
 
