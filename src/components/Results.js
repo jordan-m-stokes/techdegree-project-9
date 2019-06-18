@@ -84,14 +84,14 @@ export default class Results extends Component
     {
         if(this.state.query !== this.props.match.params.query && !this.state.loading)
         {
-            this.route();
+            this.handleRouteChange();
         }
     }
     
     //handles a route change by the user from the address bar of the browser
     componentDidMount()
     {
-        this.route();
+        this.handleRouteChange();
     }
 
     render ()
