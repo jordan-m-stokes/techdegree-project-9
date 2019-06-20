@@ -11,7 +11,7 @@ export default class Navigation extends Component
 	{
 		if(query.length > 0)
 		{
-			this.props.history.push(`/${query}`);
+			this.props.history.push(`/results/${query}`);
 		}
 	}
 
@@ -23,9 +23,9 @@ export default class Navigation extends Component
 				<Search handleSearch={this.redirect}/>
 
 				<ul className="course-nav">
-        			<li><NavLink to={`/dogs`}>Dog</NavLink></li>
-					<li><NavLink to={`/sunset`}>Sunset</NavLink></li>
-					<li><NavLink to={`/snow`}>Snow</NavLink></li>
+        			<li><NavLink to={`/results/dogs`}>Dog</NavLink></li>
+					<li><NavLink to={`/results/sunset`}>Sunset</NavLink></li>
+					<li><NavLink to={`/results/snow`}>Snow</NavLink></li>
 				</ul>
 			</nav>
      	);

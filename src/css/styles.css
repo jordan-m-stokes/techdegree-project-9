@@ -54,7 +54,7 @@ body {
   }
 
   .search-form {
-    max-width: 460px;
+    max-width: 80%;
     display: flex;
     margin: 35px auto 16px;
   }
@@ -80,15 +80,15 @@ body {
   }
   
   .main-nav li {
-    width: 100%;
-    margin-bottom: 1em;
+    width: 80%;
+    margin: 0 auto 0.8em;
   }
   
   .main-nav a {
     display: block;
     background: #438bbd;
     border-radius: 3px;
-    padding: 5px;
+    padding: 10px 5px;
     color: #fff;
   }
   
@@ -125,12 +125,18 @@ body {
   .photo-container li:hover img {
     transform: scale(1.65);
   }
+
+  .not-found {
+    font-weight: 400;
+    margin-top: 100px;
+  }
   
   @media only screen and (max-width: 767px)  {
+    
     body {
       padding-top: 2em;
     }
-  
+
     .photo-container li {
       margin: auto;
     }
@@ -154,6 +160,10 @@ body {
     .main-nav li {
       margin: 10px;
       width: 100px;
+    }
+
+    .search-form {
+      max-width: 460px;
     }
   }
   

@@ -69,7 +69,7 @@ export default class Results extends Component
         //makes sure the route is valid and reroutes if not
         if(paramaters.excess)
         {
-            this.props.history.push(`/${paramaters.query}`);
+            this.props.history.push(`/results/${paramaters.query}`);
         }
         //requests image data bases on new route
         else
