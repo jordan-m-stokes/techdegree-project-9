@@ -15,6 +15,27 @@ export default class Navigation extends Component
 		}
 	}
 
+	//checks current route to see if images need to be loaded
+	handleCurrentRoute()
+	{
+		const newQuery = this.props.match.params.query;
+
+		if(this.props.query !== newQuery)
+		{
+			this.props.performSearch(newQuery);
+		}
+	}
+
+	componentDidUpdate()
+	{
+		this.handleCurrentRoute();
+	}
+
+	componentDidMount()
+	{
+		this.handleCurrentRoute();
+	}
+
     render()
     {
       	return (
